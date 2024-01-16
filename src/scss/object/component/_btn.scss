@@ -1,0 +1,63 @@
+.c-btn{
+    width: 200px;
+    height: 50px;
+    display: flex;
+
+    a{
+        @include linkFormat;
+    }
+    
+    &__link{
+        margin: auto;
+        a{
+            @include fontStyle(Mulish, 16px, 600, 0.5px);
+            text-decoration: none;
+            color: #0a0d13;
+        }
+    }
+    &__icon{
+        display: inline-block;
+        text-align: center;
+        background-color: #e89400;
+        height: 100%;
+        margin: auto 0;
+        &__box{
+            height: 100%;
+            width: 50px;
+        }
+
+    }
+    &--mainvisual{
+        background-color: #f49f0a;
+        img{
+            margin: 12px 0;
+        }
+    }
+    &--about{
+        background-color: #f49f0a;
+        img{
+            margin: 14px 0;
+        }
+    }
+    &--discover{
+        border: 2px solid #fff;
+        margin-top: 40px;
+        
+        img{
+            margin: 14px 0;
+        }
+        a{
+            color: #fff;
+        }
+        .c-btn__icon__box{
+            background-color: #0a0d13;
+        }
+    }
+    &--journal{
+        background-color: #f49f0a;
+        margin: 50px auto;
+        img{
+            margin: 14px 0;
+        }
+    }
+}

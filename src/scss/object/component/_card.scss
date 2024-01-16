@@ -1,0 +1,158 @@
+.card-wrap{
+    @include addFlex(space-between, center);
+
+    .c-card{
+        &:nth-child(even){
+            margin-top: 10%;
+        }
+        &__body{
+            position: relative;
+        }
+        &__img{
+            width: 100%;
+            img{
+                width: 100%;
+            }
+        }
+        &__txtbox{
+            position: absolute;
+            left: 10%;
+            bottom: -10px;
+            h3{
+                font-family: 'Playfair Display';
+                font-size: 34px;
+                font-weight: 700;
+                color: #f49f0a;
+            }
+            p{
+                @include fontStyle(Mulish, 16px, 300, 0px);
+                line-height: 20px;
+                color: #fff;
+                padding: 20px 0;
+            } 
+        }
+        &--blog{
+            position: static;
+        }
+    }
+
+    &--blog{
+        justify-content: start;
+        .c-card{
+            position: relative;
+    
+            &:nth-child(even){
+                margin-top: 0;
+            }
+
+            &__txtbox{
+
+                p{
+                    @include fontStyle(Mulish, 18px, 400, 0px);
+                    line-height: 24px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:800px){
+    .card-wrap{
+        flex-wrap: wrap;
+
+        .c-card{
+            width: calc(100%/3);
+            &:nth-child(even){
+                margin-top: 0;
+            }
+            &img{
+
+                img{
+                    width: 100%;
+                }
+            }
+            &txtbox{
+                h3{
+                    font-size: 30px;
+                }
+                p{
+                    font-size: 12px;
+                } 
+            }
+        }
+        &--blog{
+            justify-content: space-between;
+            .c-card{
+                    width: calc(100%/3);
+                &__txtbox{
+
+                    p{
+                        font-size: 18px;
+                        line-height: 24px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:600px){
+    .card-wrap{
+
+        .c-card{
+            width: calc(100%/2);
+            &img{
+
+                img{
+                    width: 100%;
+                }
+            }
+            &txtbox{
+                h3{
+                    font-size: 30px;
+                }
+                p{
+                    font-size: 12px;
+                } 
+            }
+        }
+        &--blog{
+            justify-content: space-between;
+            .c-card{
+                    width: calc(100%/2);
+                &txtbox{
+
+                    p{
+                        font-size: 18px;
+                        line-height: 24px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:400px){
+    .card-wrap{
+
+        .c-card{
+            width: 100%;
+            &img{
+                width: 100%;
+
+                img{
+                    width: 100%;
+                }
+            }
+            &__txtbox{
+                h3{
+                    font-size: 30px;
+                }
+                p{
+                    font-size: 12px;
+                    line-height: 20px;
+                    padding: 20px 0;
+                } 
+            }
+        }
+    }
+}

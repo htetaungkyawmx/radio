@@ -1,0 +1,87 @@
+.p-about{
+    width: 100%;
+    
+    &__txtbox{
+        z-index: 1;
+        margin: auto;
+        padding: 0 40px;
+        
+        h2{
+            font-family: 'Playfair Display, sans-serif';
+            font-size: 42px;
+            font-weight: bold;
+            letter-spacing: 1.3px;
+            color: #fff;
+            display: inline-block;
+            margin-bottom: 40px;        
+        }
+        p{
+            @include fontStyle(Mulish, 16px, 300, 0.5px);
+            color: #fff;
+            width: 470px;
+            margin-bottom: 80px;
+        }
+        &__data{
+            @include addFlex(center, center);
+            column-gap: 100px;
+            width: 830px;
+            height: 140px;
+            background-color: #1f242e;
+            text-align: center;
+            margin-bottom: 60px;
+
+            .stat{
+                width: 150px;
+                height: 50px;
+                margin: auto 0;
+
+                h3{
+                    font-family: 'Playfair Display, sans-serif';
+                    font-size: 42px;
+                    letter-spacing: 1.3px;
+                    color: #fff;
+                    width: 100%;
+                    height: 100%;
+
+                }
+                p{
+                    @include fontStyle(Mulish, 18px, 300, 0.6px);
+                    display: inline-block;
+                    width: 100%;
+                }
+            }
+        }
+    }
+    &__img{
+        translate: -32%;
+    }
+}
+
+@media only screen and (max-width: 800px){
+    .p-about__txtbox__data{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 30px;
+        width: 100%;
+        height: 400px;
+    }
+    .p-about__txtbox{
+        p{
+            width: 100%;
+        }
+    }
+    .p-about__img{
+        width: 100%;
+        translate: 0;
+        padding: 40px;
+        img{
+            width: 100%;
+        }
+    }
+
+    .l-wrap--about{
+        flex-wrap: wrap;
+        width: 100%;
+    }
+}

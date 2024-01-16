@@ -1,0 +1,178 @@
+.p-contact{
+    background: linear-gradient(to bottom,  #0a0d13 0%,#0a0d13 50%,#1f262e 100%); 
+    margin-top: 100px;
+
+    padding-bottom: 200px;
+    &__wrap{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__txt{
+        text-align: center;
+        color: #fff;
+        text-align: start;
+        h2{
+            font-family: 'Playfair Display';
+            font-size: 34px;
+            font-weight: 700;
+            margin-top: 70px;
+            line-height: 1.5;
+        }
+        p{
+            @include fontStyle(Mulish, 18px, 400, 0.56px);
+            margin-top: 20px;
+        }
+    }
+
+    &__circle{
+        width: 278px;
+        height: 278px;
+        border-radius: 50%;
+        border: 2px solid #fff;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        
+
+        h2{
+            font-family: 'Playfair Display';
+            font-size: 34px;
+            font-weight: 700;
+            margin: 10px;
+            line-height: 46px;
+
+        }
+        &__phone a{
+            @include fontStyle(Mulish, 24px, 300, 0.75px);
+            text-decoration: none;
+            color: #fff;
+            margin: 10px;
+        }
+        p{
+            @include fontStyle(Mulish, 16px, 400, 0.5px);
+            margin: 10px;
+        }
+    }
+}
+@media screen and (max-width: 800px){
+    .p-contact{    
+        
+        &__wrap{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: start;
+        }
+        &__txt{
+            width: 450px;
+            padding-left: 70px;
+        }
+        &__circle{
+            margin: 40px auto;
+        }
+    }
+}
+@media screen and (max-width: 600px){
+    .p-contact{    
+        
+        &__wrap{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: start;
+            
+        }
+        &__txt{
+            width: 450px;
+             padding-left: 70px;
+            
+            h2{
+                font-size: 34px;
+                font-weight: 700;
+                margin-top: 70px;
+                line-height: 1.5;
+            }
+            p{
+                font-size: 18px;
+                font-weight: 400;
+                margin-top: 20px;
+            }
+        }
+    
+        &__circle{
+            width: 140px;
+            height: 140px;
+            margin: 30px auto;
+            
+    
+            h2{
+                font-size: 20px;
+                font-weight: 700;
+                margin: 2px;
+                line-height: 25px;
+    
+            }
+            &__phone a{
+                font-size: 10px;
+                font-weight: 300;
+                margin: 2px;
+            }
+            p{
+                font-size: 8px;
+                font-weight: 400;
+                margin: 2px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 400px){
+    .p-contact{    
+        
+        &__wrap{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: start;
+            
+        }
+        &__txt{
+            padding-left: 70px;
+            
+            h2{
+                font-size: 34px;
+                font-weight: 700;
+                margin-top: 70px;
+                line-height: 1.5;
+            }
+            p{
+                font-size: 18px;
+                font-weight: 400;
+                margin-top: 20px;
+            }
+        }
+    
+        &__circle{
+            width: 200px;
+            height: 200px;
+            margin: 20px auto;
+            
+    
+            h2{
+                font-size: 34px;
+                font-weight: 700;
+                margin: 10px;
+                line-height: 43px;
+    
+            }
+            &__phone a{
+                font-size: 22px;
+                font-weight: 300;
+                margin: 8px;
+            }
+            p{
+                font-size: 16px;
+                font-weight: 400;
+                margin: 8px;
+            }
+        }
+    }
+}

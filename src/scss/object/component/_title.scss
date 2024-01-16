@@ -1,0 +1,27 @@
+.c-title{
+    margin-top: 200px;
+    margin-bottom: 50px;
+    h2{
+        font-family: 'Playfair Display, sans-serif';
+        font-size: 42px;
+        font-weight: 900;
+        color: #fff;
+        margin-bottom: 20px;
+        text-align: center; 
+    }
+    p{
+        @include fontStyle(Mulish, 16px, 300, 0.5px);
+        color: #fff;
+        text-align: center;
+        width: 400px;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (max-width: 800px){
+    .c-title{
+        p{
+            width: 100%;
+        }
+    }
+}

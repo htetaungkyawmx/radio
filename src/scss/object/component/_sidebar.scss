@@ -1,0 +1,33 @@
+.sidebar{
+    position: fixed;
+    right: 0;
+    z-index: 2;
+    width: 320px;
+    top: 90px;
+    overflow: auto;
+    translate: 100% 0;
+    transition: 0.5s ease translate;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100%;
+
+    ul{
+        text-align: center;
+        li{
+            margin: 40px 0px;
+        } 
+        a{
+            @include fontStyle(Mulish, 16px, 300, 0.5px);
+            @include linkFormat;
+            line-height: 20px;
+            color: #fff;
+            text-decoration: none;
+        }
+        a:hover{
+            color: #f49f0a;
+        }
+    }
+}
+
+.sidebar.show{
+    translate: 0;
+}

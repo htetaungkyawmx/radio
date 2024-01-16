@@ -1,0 +1,44 @@
+.p-mainvisual{
+    position: relative;
+    background-image: url('../img/mainvisual.png');
+    height: 900px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    color: #FFF;
+
+    &__txtbox{
+        @include addFlex(center, start);
+        height: 900px;
+        width: 700px;
+        flex-direction: column;
+        h2{
+            font-family: 'Playfair Display, sans-serif';
+            font-size: 64px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            margin-bottom: 30px;
+        }
+        p{
+            @include fontStyle(Mulish, 18px, 300, 0.6px);
+            margin-bottom: 60px;
+        }
+        p::before{
+            content: '';
+            display: inline-block;
+            width: 40px;
+            height: 1.5px;
+            background: #fff;
+            margin-bottom: 5px;
+        }
+    }
+}
+
+@media only screen and (max-width: 800px){
+    .p-mainvisual__txtbox{
+        width: 100%;
+        h2{
+            font-size: 40px;
+        }
+    }
+
+}
